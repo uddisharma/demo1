@@ -1,0 +1,594 @@
+/*******************************************************/
+/******************* 06. Header style ******************/
+/*******************************************************/
+.main-header
+    position: relative
+    left: 0px
+    top: 0px
+    z-index: 999
+    width: 100%
+    transition: all 500ms ease
+    .header-upper
+        z-index: 5
+        width: 100%
+        position: relative
+        transition: all 500ms ease
+        border-bottom: 1px solid $border-color
+        +res-ab(lb)
+            +gapLR(padding, 55px)
+    .logo-outer
+        flex: none
+        +res-bl(lg)
+            display: none
+    .logo
+        z-index: 9
+        padding: 2px 0
+        position: relative
+    &.menu-absolute
+        .header-upper
+            position: absolute
+    &.fixed-header
+        .header-upper
+            top: 0
+            left: 0
+            position: fixed
+            background: white
+            animation: sticky  1s
+            box-shadow: 0px 0px 30px 0px rgba(87, 95, 245, .10)
+
+.header-top-wrap
+    +res-bl(lg)
+        display: none
+.header-top
+    font-family: $heading-font
+    +res-ab(lb)
+        +gapLR(padding, 55px)
+    ul
+        display: inline-flex
+        li
+            display: flex
+            align-items: center
+            position: relative
+            > i
+                margin-right: 13px
+            b
+                font-weight: 600
+                margin-right: 8px
+            &:not(:last-child)
+                &:after
+                    content: ''
+                    +gapLR(margin, 35px)
+                    +circle(transparentize(white, 0.6), 4px)
+    .top-left
+        ul li
+            &:not(:first-child)
+                +res-bl(lp)
+                    display: none
+    
+.nav-outer
+    width: 100%
+    margin-left: 135px
+    +res-bl(xxl)
+        margin-left: 35px
+    +res-bl(lg)
+        margin-left: 0
+ 
+/** Header Main Menu **/
+.main-menu
+    +res-bl(lg)
+        width: 100%
+    .mobile-logo
+        margin-right: auto
+        +res-bl(sm)
+            max-width: 150px
+    .collapse
+        +res-bl(lg)
+            overflow: auto
+    .navbar-collapse
+        padding: 0px
+        > ul
+            display: flex
+            +res-bl(lg)
+                display: block
+                padding: 25px 0
+                background: #FFFFFF
+                > li:last-child
+                    border-bottom: 1px solid #f3f3f3
+        +res-bl(lg)
+            left: 0
+            width: 100%
+            padding: 0 15px
+            position: absolute
+        li
+            position: relative
+            padding: 28px 16px
+            +flexcenter(space-between)
+            +res-bl(xxl)
+                +gapLR(padding, 10px)
+            +res-bl(lg)
+                display: block
+                padding: 0 20px
+                border-top: 1px solid #f3f3f3
+            &.dropdown .dropdown-btn
+                cursor: pointer
+                font-size: 12px
+                margin-left: 5px
+                color: $heading-color
+                +res-bl(lg)
+                    position: absolute
+                    right: 10px
+                    top: 0
+                    width: 50px
+                    height: 43px
+                    border-left: 1px solid #f2f2f2
+                    text-align: center
+                    line-height: 43px
+            a
+                display: block
+                font-size: 18px
+                opacity: 1
+                font-weight: 600
+                color: $heading-color
+                text-transform: capitalize
+                font-family: $heading-font
+                transition: all 500ms ease
+                +res-bl(lg)
+                    padding: 10px 10px
+                    line-height: 22px
+                +res-ab(lg)
+                    &:before
+                        content: ''
+                        left: 50%
+                        top: 100%
+                        opacity: 0
+                        z-index: 5
+                        +size(0, 3px)
+                        transition: 0.5s
+                        position: absolute
+                        background: $primary-color
+                        transform: translate(-50%)
+                &:hover
+                    color: $primary-color
+                    &:before
+                        opacity: 1
+                        width: 80%
+            &.current > a, &.current-menu-item > a
+                font-weight: 500
+            li
+                border-top: 1px solid #f3f3f3
+                a
+                    text-transform: capitalize
+                    &:before
+                        display: none
+            .megamenu
+                position: absolute
+                left: 0px
+                top: 100%
+                width: 100%
+                z-index: 100
+                display: none
+                padding: 20px 0
+                background: #ffffff
+                box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05)
+                +clearfix
+                +res-bl(lg)
+                    position: relative
+                    box-shadow: none
+                    width: 100%
+                    .container
+                        max-width: 100%
+                    .row
+                        margin: 0px
+                ul
+                    display: block
+                    position: relative
+                    top: 0
+                    width: 100%
+                    box-shadow: none
+            ul
+                position: absolute
+                left: inherit
+                top: 100%
+                min-width: 250px
+                z-index: 100
+                display: none
+                background: #ffffff
+                box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05)
+                +res-bl(lg)
+                    position: relative
+                    display: none
+                    width: 100%
+                    box-shadow: none
+                    +clearfix
+                    +res-bl(xs)
+                        min-width: auto
+                li
+                    width: 100%
+                    padding: 7px 20px
+                    +res-bl(lg)
+                        padding: 0 15px
+                    ul
+                        left: 100%
+                        top: 0%
+                        +res-bl(lg)
+                            left: auto
+
+    .navbar-header
+        display: none
+        margin-right: 30px
+        +res-bl(lg)
+            +flexcenter(start)
+        .navbar-toggle
+            float: right
+            padding: 4px 0
+            cursor: pointer
+            background: transparent
+            .icon-bar
+                background: $base-color
+                height: 2px
+                width: 30px
+                display: block
+                margin: 7px 0
+
+/* Menu Icons */
+.menu-icons
+    display: flex
+    align-items: center
+    > button
+        margin-left: 38px
+        background: transparent
+        +res-bl(xxl)
+            margin-left: 30px
+        +res-bl(sm)
+            display: none
+    .cart
+        position: relative
+        span
+            top: -10px
+            color: white
+            font-size: 12px
+            font-weight: 700
+            position: absolute
+            +circle($secondary-color, 20px)
+    .theme-btn
+        +gapLR(margin, 40px)
+        +res-bl(xxl)
+            +gapLR(margin, 30px)
+        +res-bl(xl)
+            display: none
+        
+/* Header Search */
+.nav-search
+    position: relative
+    +res-bl(sm)
+        display: none
+    button
+        background: transparent
+    form
+        position: absolute
+        width: 320px
+        top: 100%
+        right: 0
+        z-index: 777
+        padding: 10px
+        +flexcenter(center)
+        background-color: #fff
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05)
+        &.hide
+            display: none
+        input
+            border: none
+            padding: 15px 5px 15px 25px
+        button
+            padding: 15px 20px 15px 0
+    
+/* Menu Sidebar */
+.menu-sidebar
+    display: flex
+    +res-bt(sm, xl)
+        margin-left: 30px
+    button
+        width: 25px
+        cursor: pointer
+        flex-wrap: wrap
+        font-size: 26px
+        border-radius: 50%
+        +flexcenter(center)
+        background: transparent
+        i
+            margin: -8.5px 0
+        
+  
+/** hidden-sidebar *
+.hidden-bar
+    position: fixed
+    right: -350px
+    top: 0px
+    opacity: 0
+    width: 350px
+    height: 100%
+    z-index: 99999
+    overflow-y: auto
+    visibility: hidden
+    background-color: $heading-color
+    border-left: 1px solid #231b26
+    transition: all 0.5s ease
+    +res-bl(xs)
+        width: 300px
+    .social-style-one
+        a
+            +size(40px)
+            line-height: 40px
+
+.side-content-visible .hidden-bar
+    right: 0px
+    opacity: 1
+    visibility: visible
+
+.hidden-bar .inner-box
+    position: relative
+    padding: 100px 40px 50px
+    +res-bl(xs)
+        +gapLR(padding, 25px)
+    .cross-icon
+        position: absolute
+        right: 30px
+        top: 30px
+        cursor: pointer
+        color: #ffffff
+        font-size: 20px
+        transition: all 500ms ease
+    h4
+        position: relative
+        color: #ffffff
+        margin-bottom: 35px
+
+/*Appointment Form
+.hidden-bar .appointment-form
+    position: relative
+
+    .form-group
+        position: relative
+        margin-bottom: 20px
+
+    input
+        &[type="text"], &[type="email"]
+            position: relative
+            display: block
+            width: 100%
+            line-height: 23px
+            padding: 10px 25px
+            color: #ffffff
+            font-size: 16px
+            background: none
+            transition: all 300ms ease
+            border: 1px solid rgba(255, 255, 255, 0.1)
+
+    textarea
+        position: relative
+        display: block
+        width: 100%
+        line-height: 23px
+        padding: 10px 25px
+        color: #ffffff
+        font-size: 16px
+        border: 1px solid rgba(255, 255, 255, 0.1)
+        background: none
+        transition: all 300ms ease
+        resize: none
+
+    input::placeholder
+        font-size: 14px
+        color: #bdbdbd
+
+    textarea
+        &::placeholder
+            font-size: 14px
+            color: #bdbdbd
+
+    .form-group button
+        width: 100%
+        font-size: 16px
+        padding: 10px 15px
+        margin-bottom: 20px
+        border-color: white
+
+.form-back-drop
+    position: fixed
+    right: 0px
+    top: 0px
+    width: 100%
+    height: 100%
+    opacity: 0
+    background: rgba(0, 0, 0, 0.7)
+    visibility: hidden
+    z-index: 9990
+    transition: all 0.5s ease
+
+.side-content-visible .form-back-drop
+    opacity: 1
+    visibility: visible
+    
+/* Header Two */
+.main-header.header-two
+    position: absolute
+    .header-top-wrap
+        .header-top
+            +res-bl(lb)
+                +gapLR(padding, 25px)
+        .container
+            +res-ab(xl)
+                max-width: 1300px
+    .header-upper
+        border-bottom: none
+        .menu-icons .cart
+            +gapLR(margin, 30px)
+        .logo,
+        .mobile-logo
+            img
+                &:first-child
+                    display: none
+    .menu-sidebar
+        margin-left: 0
+    &.fixed-header
+        .logo,
+        .mobile-logo
+            img
+                &:first-child
+                    display: block
+                &:last-child
+                    display: none
+    &:not(.fixed-header)
+        .main-menu
+            +res-ab(lg)
+                .navbar-collapse
+                    > ul
+                        > li
+                            > a
+                                color: white
+                            > .dropdown-btn
+                                color: white
+        .menu-icons,
+        .nav-search,
+        .menu-sidebar
+            > button
+                color: white
+        .navbar-toggle .icon-bar
+            background: white
+    
+/* Header Three */
+.main-header.header-three
+    .header-top-wrap
+        .header-top
+            ul
+                display: flex
+                +gapLR(margin, -10px)
+                justify-content: space-between
+                +res-bl(lb)
+                    flex-wrap: wrap
+                    justify-content: center
+                li
+                    font-weight: 600
+                    line-height: 1.58
+                    +gapLR(margin, 10px)
+                    color: $heading-color
+                    text-transform: uppercase
+                    &:after,
+                    &:before
+                        content: '\f621'
+                        font-family: 'Font Awesome 5 Pro'
+                    &:before
+                        margin-right: 18px
+                    &:after
+                        +size(auto)
+                        margin-right: 0
+                        margin-left: 18px
+                        background: transparent
+    .header-upper
+        border-bottom: none
+        .header-inner
+            z-index: 10
+            position: relative
+            border: 1px solid $border-color
+            .nav-outer
+                margin-left: 0
+    .main-menu
+        .navbar-collapse
+            +res-bl(lg)
+                +gapLR(padding, 0)
+                margin-top: 1px
+            .navigation
+                > li
+                    padding: 20px 70px
+                    border-right: 1px solid $border-color
+                    +res-bl(lb)
+                        +gapLR(padding, 50px)
+                    +res-bl(lp)
+                        +gapLR(padding, 30px)
+                    +res-bl(lg)
+                        padding: 0 15px
+                        border-left: 1px solid $border-color
+                    .dropdown-btn
+                        transition: 0.5s
+                    +res-ab(lg)
+                        &:hover
+                            > a
+                                color: white
+                                &:before
+                                    opacity: 1
+                            > .dropdown-btn
+                                color: white
+                    > a
+                        &:before
+                            top: 0
+                            z-index: -1
+                            +size(100%)
+                            background: $heading-color
+                    li
+                        a
+                            &:hover
+                                color: $primary-color-two
+    .menu-sidebar
+        margin-right: 70px
+        +res-bl(lp)
+            margin-right: 30px
+        +res-bl(xs)
+            margin-right: 15px
+    .header-middle
+        +res-bl(md)
+            display: none
+    .header-middle-inner
+        +flexcenter(space-between)
+        .menu-middle-left
+            display: flex
+            align-items: center
+            .nice-select
+                font-size: 14px
+                margin-right: 15px
+                text-transform: uppercase
+                padding: 9px 40px 9px 17px
+                .current
+                    font-weight: 500
+                    color: $base-color
+                &:after
+                    +size(7px)
+                    margin-top: -5px
+                    border-color: $base-color
+            .follower
+                display: flex
+                font-weight: 500
+                align-items: center
+                min-width: max-content
+                i
+                    font-size: 18px
+                    margin-right: 7px
+        .menu-icons 
+            > button
+                font-size: 18px
+                margin-left: 30px
+                &.cart 
+                    span
+                        background: red
+            .nav-search
+                +res-bl(xl)
+                    display: none
+                input
+                    font-size: 16px
+                    font-weight: 400
+                    border-radius: 0
+                    border-width: 0 0 1px
+                    padding: 0 35px 5px 15px
+                button
+                    position: absolute
+                    right: 15px
+                    top: 50%
+                    transform: translateY(-50%)
+    .navbar-header
+        +res-bl(xs)
+            margin-right: 15px
+    .mobile-logo
+        margin-left: 30px
+        +res-bl(xs)
+            max-width: 125px
+            margin-left: 15px
+                    

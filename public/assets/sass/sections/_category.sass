@@ -1,0 +1,70 @@
+/*******************************************************/
+/**************** 09. Category Section *****************/
+/*******************************************************/
+.category-wrap
+    display: flex
+    flex-wrap: wrap
+    +gapLR(margin, -15px)
+    .category-item
+        z-index: 1
+        padding: 30px
+        text-align: center
+        position: relative
+        margin-bottom: 50px
+        +gapLR(margin, 15px)
+        width: calc(20% - 30px)
+        +overlay(white, 1)
+        +res-bl(xl)
+            width: calc(33.333% - 30px)
+        +res-bl(md)
+            width: calc(50% - 30px)
+        +res-bl(ms)
+            width: calc(100% - 30px)
+        &:nth-child(odd):before
+            transform: matrix(1, -0.04, 0, 1, 1, 1)
+        &:nth-child(even):before
+            transform: matrix(1, 0.04, 0, 1, 1, 1)
+        &:before
+            transition: 0.5s
+            border: 1px solid $border-color
+        .icon
+            margin-bottom: 20px
+            display: inline-block
+            +circle(transparentize($secondary-color, 0.95), 100px)
+        h5
+            margin-bottom: 15px
+        &:hover
+            &:before
+                border-color: white
+                box-shadow: 10px 0 60px transparentize($secondary-color, 0.85)
+        
+.category-active
+    +gapLR(margin, -15px)
+    .category-item-two
+        +gapLR(margin, 15px)
+        img
+            display: inline-block
+    .slick-arrow
+        z-index: 2
+        +size(45px)
+        font-size: 14px
+        line-height: 45px
+        border-radius: 50%
+        position: absolute
+        top: calc(50% - 37.5px)
+        &.slider-prev
+            left: 0
+        &.slider-next
+            right: 0
+.category-item-two
+    text-align: center
+    margin-bottom: 30px
+    padding: 25px 20px 30px
+    border: 1px solid $border-color
+    .image
+        height: 100px
+        +flexcenter(center)
+        margin-bottom: 15px
+    h5
+        font-size: 18px
+        margin-bottom: 0

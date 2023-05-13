@@ -1,0 +1,66 @@
+/*******************************************************/
+/****************** 13. Video Section ******************/
+/*******************************************************/
+.video-area
+    z-index: 2
+    margin-top: -250px
+    position: relative
+    transform: translateY(250px)
+.video-inner
+    height: 500px
+    +flexcenter(center)
+    background-size: cover
+    flex-direction: column
+    +overlay($heading-color, 0.35)
+    +res-bl(ms)
+        height: 400px
+    > i
+        color: white
+        font-size: 75px
+        margin-bottom: 15px
+        display: inline-block
+    .video-text
+        color: white
+        line-height: 1
+        font-size: 65px
+        margin-bottom: 25px
+        display: inline-block
+        font-family: $script-font
+        +res-bl(ms)
+            font-size: 55px
+        +res-bl(xs)
+            font-size: 45px
+        
+/* Footer top Video Area */
+.video-cta-inner
+    height: 450px
+    padding: 15px
+    +flexcenter(center)
+    background-size: cover
+    &:before
+        mix-blend-mode: multiply
+    .content
+        > i
+            color: white
+            font-size: 75px
+            margin-bottom: 15px
+            display: inline-block
+    .video-text
+        color: white
+        line-height: 1
+        display: block
+        font-size: 65px
+        margin-bottom: 25px
+        font-family: $script-font
+        +res-bl(ms)
+            font-size: 55px
+        +res-bl(xs)
+            font-size: 45px
+    &.video-part
+        text-align: center
+        .video-play
+            i
+                color: $primary-color
+    &.content-part
+        +res-bl(lg)
+            text-align: center

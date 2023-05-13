@@ -1,0 +1,69 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?954b58c9f48c7f681e89ca525a59a432") format("truetype"),
+url("./flaticon.woff?954b58c9f48c7f681e89ca525a59a432") format("woff"),
+url("./flaticon.woff2?954b58c9f48c7f681e89ca525a59a432") format("woff2"),
+url("./flaticon.eot?954b58c9f48c7f681e89ca525a59a432#iefix") format("embedded-opentype"),
+url("./flaticon.svg?954b58c9f48c7f681e89ca525a59a432#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "wheat-sack": "\f101",
+    "fruits": "\f102",
+    "social-care": "\f103",
+    "leaf-1": "\f104",
+    "offer": "\f105",
+    "return-box": "\f106",
+    "24-hours": "\f107",
+    "quote": "\f108",
+    "eggs-1": "\f109",
+    "delivery-man": "\f10a",
+    "sea-waves": "\f10b",
+);
+
+.flaticon-wheat-sack:before {
+    content: map-get($flaticon-map, "wheat-sack");
+}
+.flaticon-fruits:before {
+    content: map-get($flaticon-map, "fruits");
+}
+.flaticon-social-care:before {
+    content: map-get($flaticon-map, "social-care");
+}
+.flaticon-leaf-1:before {
+    content: map-get($flaticon-map, "leaf-1");
+}
+.flaticon-offer:before {
+    content: map-get($flaticon-map, "offer");
+}
+.flaticon-return-box:before {
+    content: map-get($flaticon-map, "return-box");
+}
+.flaticon-24-hours:before {
+    content: map-get($flaticon-map, "24-hours");
+}
+.flaticon-quote:before {
+    content: map-get($flaticon-map, "quote");
+}
+.flaticon-eggs-1:before {
+    content: map-get($flaticon-map, "eggs-1");
+}
+.flaticon-delivery-man:before {
+    content: map-get($flaticon-map, "delivery-man");
+}
+.flaticon-sea-waves:before {
+    content: map-get($flaticon-map, "sea-waves");
+}

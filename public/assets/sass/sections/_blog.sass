@@ -1,0 +1,234 @@
+/*******************************************************/
+/****************** 18. Blog Section *******************/
+/*******************************************************/
+.news-item
+    margin-bottom: 50px
+    .image
+        position: relative
+        margin-bottom: 25px
+        img
+            width: 100%
+        .date
+            right: 25px
+            color: white
+            bottom: -40px
+            display: flex
+            line-height: 1
+            font-size: 18px
+            +size(70px, 80px)
+            position: absolute
+            text-align: center
+            flex-direction: column
+            justify-content: center
+            font-family: $heading-font
+            background: $primary-color
+            border-radius: 15px 35px 35px 35px
+            b
+                display: block
+                font-size: 26px
+                font-weight: 700
+                margin-bottom: 5px
+    h4
+        font-size: 22px
+        margin-top: 15px
+        a
+            &:hover
+                color: $heading-color
+                text-decoration: underline
+            
+.news-section
+    z-index: 1
+    position: relative
+.news-shapes
+    img
+        z-index: -1
+        max-width: 10%
+        position: absolute
+    .onion
+        right: 10%
+        top: -5%
+    .two-leaf
+        left: 6%
+        top: 10%
+        animation: upDownLeft 40s infinite
+    .half-leaf
+        bottom: 0
+        left: 10%
+        animation: moveLeftRight 30s infinite
+    .leaf-two
+        right: 8%
+        bottom: 20%
+        animation: down-up-two 20s infinite
+    .leaf-three
+        right: 0
+        top: 15%
+        animation: down-up-one 15s infinite
+        
+/* News Page */
+.news-page-section
+    .onion
+        left: 3%
+        top: 50%
+    .leaf-three
+        right: 3%
+        top: 100px
+    .leaf-left
+        left: 0
+        bottom: 130px
+        animation: down-up-one 10s infinite
+    .litchi
+        right: 3%
+        top: 33%
+        
+/* Blog Standard */
+.news-standard-item
+    display: flex
+    align-items: center
+    margin-bottom: 40px
+    +res-bl(md)
+        display: block
+    .image
+        flex: none
+        width: 44%
+        margin-right: 50px
+        +res-bl(md)
+            width: 100%
+            margin: 0 0 20px
+        img
+            width: 100%
+    .content
+        padding-top: 9px
+        h4
+            font-size: 22px
+            line-height: 1.6
+            +res-bl(xs)
+                font-size: 20px
+.blog-meta
+    display: flex
+    flex-wrap: wrap
+    margin-bottom: 8px
+    align-items: center
+    li
+        line-height: 1
+        margin-bottom: 10px
+        &:not(:last-child)
+            margin-right: 30px
+            padding-right: 30px
+            border-right: 1px solid #666666
+            +res-bl(xs)
+                margin-right: 10px
+                padding-right: 10px
+        i
+            margin-right: 5px
+            +res-bl(xs)
+                margin-right: 3px
+                
+/* Blog Details */
+.blog-details-content
+    +res-ab(xl)
+        margin-right: 50px
+    .title
+        font-size: 28px
+        max-width: 650px
+        +res-bl(sm)
+            font-size: 25px
+        +res-bl(xs)
+            font-size: 20px
+    h4
+        font-size: 22px
+        +res-bl(xs)
+            font-size: 20px
+        
+blockquote
+    +container(630px)
+    @extend %heading
+    line-height: 1.48
+    text-align: center
+    padding: 35px 55px
+    font-size: $h4-size
+    +gapTB(margin, 35px)
+    border: 1px solid $border-color
+    +res-bl(sm)
+        font-size: 20px
+        +gapLR(padding, 25px)
+    &:after,
+    &:before
+        font-size: 16px
+        display: inline-block
+        font-family: 'Font Awesome 5 Pro'
+    &:before
+        content: "\f10d"
+        transform: translate(-5px, -15px)
+    &:after
+        content: "\f10e"
+        transform: translate(5px, 15px)
+    
+.tag-share
+    flex-wrap: wrap
+    +flexcenter(space-between)
+    +gapTB(border, 1px solid $border-color)
+    h6
+        margin-right: 10px
+    .tags
+        display: flex
+        flex-wrap: wrap
+        align-items: center
+        a
+            line-height: 1
+            margin-right: 5px
+            margin-bottom: 8px
+            &:not(:last-child)
+                &:after
+                    content: ','
+    .social-style-one
+        a
+            height: 20px
+            color: #b9b9b9
+            margin-bottom: 10px
+            &:hover
+                color: $secondary-color
+            
+.next-prev-post
+    +flexcenter(space-between)
+    +res-bl(md)
+        flex-direction: column
+    > div
+        display: flex
+        max-width: 260px
+        align-items: center
+        .image
+            flex: none
+            max-width: 80px
+            margin-right: 18px
+            img
+                border-radius: 5px
+        .content
+            h6
+                font-size: 18px
+                font-weight: 500
+                margin-bottom: 0
+    .show-all
+        width: 25px
+        cursor: pointer
+        flex-wrap: wrap
+        font-size: 26px
+        border-radius: 50%
+        +flexcenter(center)
+        background: transparent
+        +res-bl(md)
+            +gapTB(margin, 25px)
+        i
+            margin: -8.5px 0
+        &:not(:hover)
+            color: $secondary-color
+        
+/* News Slider */
+.news-slider
+    +gapLR(margin, -15px)
+    .news-item
+        margin-bottom: 20px
+        +gapLR(margin, 15px)
+    .slick-dots li
+        background: $secondary-color
+        &:before
+            border-color: $secondary-color

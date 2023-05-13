@@ -1,0 +1,47 @@
+/*******************************************************/
+/*************** 19. Client Logo Section ***************/
+/*******************************************************/
+.client-logo-section
+    z-index: 1
+    position: relative
+.client-logo-shapes
+    img
+        z-index: -1
+        position: absolute
+    .shape-one
+        left: 10%
+        top: 30px
+        animation: upDownLeft 40s infinite
+    .shape-two
+        top: 0
+        left: 36%
+        animation: moveLeftRight 30s infinite
+    .shape-three
+        top: -10%
+        left: 60%
+        animation: down-up-two 15s infinite
+    .shape-four
+        top: 10%
+        right: 8%
+        animation: down-up-one 10s infinite
+    .shape-five
+        left: 45%
+        bottom: 0
+        animation: moveLeftRight 30s infinite
+        animation-delay: 10s
+    .shape-six
+        bottom: 0
+        right: 18%
+        animation: moveLeftRight 30s infinite
+.client-logo-item
+    +gapLR(margin, 15px)
+    img
+        display: inline-block
+    &.color-hover
+        +flexcenter(center)
+        a
+            opacity: 0.35
+            filter: grayscale(1)
+            &:hover
+                opacity: 1
+                filter: grayscale(0)

@@ -1,0 +1,274 @@
+/*******************************************************/
+/****************** 10. About Section ******************/
+/*******************************************************/
+.about-images
+    position: relative
+    margin-bottom: -30px
+    +res-ab(xxl)
+        margin-left: -125px
+    +res-ab(xl)
+        margin-right: 65px
+    img
+        width: 100%
+        margin-bottom: 30px
+    .offer
+        left: 50%
+        bottom: 6%
+        max-width: 40%
+        position: absolute
+        transform: translate(-60%)
+        
+.about-content
+    .nav
+        border-bottom: 1px solid $border-color
+        li
+            width: 48%
+        .nav-link
+            display: flex
+            padding: 0 0 35px 0
+            align-items: center
+            margin-bottom: -1px
+            border-bottom: 1px solid transparent
+            +res-bl(sm)
+                padding-bottom: 25px
+            i
+                flex: none
+                font-size: 65px
+                margin-right: 22px
+                color: $secondary-color
+                +res-bl(sm)
+                    display: none
+            h4
+                margin-bottom: 0
+                +res-bl(xs)
+                    font-size: 20px
+            &.active
+                border-color: $secondary-color
+    .author-wrap
+        display: flex
+        flex-wrap: wrap
+        margin-top: 15px
+        align-items: center
+        img
+            margin-top: 15px
+            &:first-child
+                margin-right: 25px
+        .title
+            margin-top: 15px
+            margin-right: 45px
+            h4
+                margin-bottom: 5px
+                +res-bl(xs)
+                    font-size: 20px
+            span
+                font-weight: 600
+                color: $secondary-color
+                
+/* About Home Two */
+.about-two-image
+    max-width: 470px
+    position: relative
+    .image
+        width: 100%
+        border-radius: 200px 200px 0 0
+    .about-over
+        left: 0
+        bottom: 0
+        max-width: 90%
+        position: absolute
+    &.not-rounded
+        max-width: 500px
+        .image
+            border-radius: 0
+.about-features
+    +res-ab(lg)
+        margin-left: -330px 
+.about-feature-item
+    z-index: 1
+    background: white
+    position: relative
+    margin-bottom: 30px
+    padding: 35px 35px 28px
+    box-shadow: 10px 0 60px rgba(26, 36, 40, 0.07)
+    .icon
+        font-size: 55px
+        margin-bottom: 22px
+        color: $secondary-color
+    .number
+        top: 5px
+        z-index: -1
+        right: 20px
+        opacity: 0.07
+        line-height: 1
+        font-weight: 700
+        font-size: 200px
+        color: transparent
+        position: absolute
+        -webkit-text-stroke: 1px
+        font-family: $heading-font
+        -webkit-text-stroke-color: black
+    p
+        margin-bottom: 10px
+    &.style-two
+        z-index: 2
+        position: relative
+        h4
+            font-size: 22px
+            transition: 0.5s
+        p
+            transition: 0.5s
+        .feature-bg
+            top: 0
+            left: 0
+            +size(100%)
+            opacity: 0
+            transition: 0.5s
+            +overlay($heading-color, 1)
+            background-size: cover
+            position: absolute
+            z-index: -1
+            &:before
+                mix-blend-mode: multiply
+        &:hover
+            h4, h4 a, p
+                color: white
+            .feature-bg
+                opacity: 1
+        
+.about-shapes
+    img
+        z-index: -1
+        max-width: 20%
+        position: absolute
+        &:first-child
+            left: 0
+            bottom: -2%
+            animation: down-up-one 10s infinite
+        &:last-child
+            top: 10%
+            right: 5%
+            animation: down-up-two 20s infinite
+        
+/* About Section Three */
+.about-section-three
+    .shape
+        position: absolute
+        left: 0
+        top: 40%
+        z-index: -1
+        max-width: 10%
+        animation: down-up-one 10s infinite
+        
+.about-three-content
+    +res-ab(xl)
+        margin-right: -30px
+        
+.about-feature-two
+    display: flex
+    transition: 0.5s
+    padding: 25px 35px
+    align-items: center
+    margin-bottom: 30px
+    border: 1px solid $border-color
+    +res-bt(lg, xl)
+        flex-wrap: wrap
+        .icon
+            margin-bottom: 12px
+    +res-bl(xs)
+        +gapLR(padding, 25px)
+    .icon
+        font-size: 55px
+        transition: 0.5s
+        margin-right: 22px
+        color: $secondary-color
+    h4
+        margin-bottom: 0
+        transition: 0.5s
+    &:hover
+        border-radius: 10px
+        background: $secondary-color
+        border-color: $secondary-color
+        h4,
+        h4 a,
+        .icon
+            color: white
+    &.style-two
+        display: block
+        border-radius: 5px
+        text-align: center
+        padding-top: 28px
+        +gapLR(padding, 20px)
+        .icon
+            font-size: 60px
+            margin: 0 0 15px
+        h4
+            font-size: 20px
+        
+.about-btn-number
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    .theme-btn
+        margin-top: 15px
+        margin-right: 30px
+    .number
+        display: flex
+        margin-top: 15px
+        align-items: center
+        i
+            color: white
+            margin-right: 15px
+            +circle($primary-color, 45px)
+        b
+            font-size: 18px
+            font-weight: 700
+            color: $heading-color
+        
+.about-video
+    position: relative
+    display: inline-block
+    +overlay($heading-color, 0.15)
+    +res-ab(xl)
+        margin-left: 30px
+    &:before
+        z-index: 0
+    .video-play
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+    .bg-shape
+        top: -20%
+        right: -45%
+        z-index: -1
+        max-width: 85%
+        position: absolute
+        animation: down-up-two 15s infinite
+        
+/* About Page */
+.about-page-section
+    .shape
+        top: 10%
+        left: 5%
+        z-index: -1
+        max-width: 10%
+        position: absolute
+        animation: down-up-one 10s infinite
+        
+/* Who We Are */
+.who-we-are-content
+    max-width: 510px
+.who-we-are-shapes
+    img
+        z-index: -1
+        position: absolute
+        &.shape-one
+            left: 3%
+            top: 100px
+            max-width: 15%
+            animation: down-up-two 15s infinite
+        &.shape-two
+            right: 10%
+            top: -100px
+            max-width: 20%
+            animation: moveLeftRight 20s infinite

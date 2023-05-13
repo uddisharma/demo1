@@ -1,0 +1,86 @@
+/*******************************************************/
+/***************** 21. Services Section ****************/
+/*******************************************************/
+.what-we-provide-left
+    text-align: right
+    .ww-provide-item
+        &:first-child
+            margin-left: auto
+.what-we-provide-right
+    .ww-provide-item
+        &:last-child
+            margin-left: auto
+.ww-provide-item
+    max-width: 230px
+    margin-bottom: 40px
+    +res-bl(xs)
+        text-align: center
+        +gapLR(margin, auto)
+    .icon
+        height: 60px
+        margin-bottom: 20px
+        
+.what-we-provide-images
+    max-width: max-content
+    +gapLR(margin, auto)
+    position: relative
+    padding-right: 10%
+    z-index: 1
+    .offer
+        left: 20%
+        bottom: 20%
+        max-width: 35%
+        position: absolute
+    .bg
+        left: 0
+        bottom: 3%
+        z-index: -1
+        position: absolute
+        
+.ww-provide-shapes
+    img
+        z-index: -1
+        position: absolute
+    .shape-one
+        left: 10%
+        top: 15%
+        max-width: 10%
+        animation: down-up-two 20s infinite
+    .shape-two
+        left: 0
+        bottom: 0
+        max-width: 20%
+        animation: down-up-one 10s infinite
+    .shape-three
+        right: 0
+        top: 10%
+        max-width: 25%
+        animation: down-up-one 10s infinite
+        
+/* Service Details */
+.service-details-content
+    +res-ab(xl)
+        margin-right: 50px
+    .image
+        margin-bottom: 30px
+        img
+            width: 100%
+    h3
+        +res-ab(sm)
+            font-size: 35px
+    h4
+        font-size: 27px
+    p
+        font-size: 18px
+        margin-bottom: 20px
+    blockquote
+        margin-bottom: 0
+        max-width: none
+        border: none
+        font-weight: 500
+        padding-top: 10px
+        padding-bottom: 7px
+        color: $secondary-color
+        &:after,
+        &:before
+            font-weight: 600

@@ -1,0 +1,77 @@
+/*******************************************************/
+/***************** 27. Contact Section *****************/
+/*******************************************************/
+.contact-title
+    h3
+        +res-ab(xl)
+            font-size: 35px
+            
+.contact-info-item
+    display: flex
+    padding: 35px
+    font-size: 18px
+    transition: 0.5s
+    border-radius: 5px
+    margin-bottom: 30px
+    background: #f8fbf3
+    +res-bl(lg)
+        font-size: 16px
+        +gapLR(padding, 25px)
+    +res-bl(xs)
+        display: block
+    .icon
+        flex: none
+        margin-top: 6px
+        margin-right: 30px
+        +res-bl(lg)
+            margin-bottom: 10px
+    &:hover
+        background: white
+        box-shadow: 10px 0 60px rgba(34, 34, 34, 0.1)
+            
+.contact-right-image
+    z-index: 1
+    max-width: 570px
+    text-align: center
+    position: relative
+    .bg
+        top: 50%
+        left: 50%
+        z-index: -1
+        max-width: 120%
+        position: absolute
+        transform: translate(-40%, -42%)
+        
+.contact-shapes
+    img
+        z-index: -1
+        max-width: 15%
+        position: absolute
+    .leafs
+        left: 3%
+        top: 120px
+        animation: down-up-two 20s infinite
+    .pumpkin
+        right: 5%
+        top: 130px
+        animation: upDownLeft 30s infinite
+    .leaf
+        left: 3%
+        top: 30%
+        animation: down-up-one 10s infinite
+    .shape
+        left: 3.5%
+        bottom: 130px
+        animation: moveLeftRight 20s infinite
+    .two-leaf
+        right: 3%
+        bottom: 130px
+        animation: down-up-two 20s infinite
+        
+.has-error
+    .with-errors
+        color: red
+        margin-top: 5px
+#msgSubmit
+    margin-top: 15px
+    margin-bottom: 0

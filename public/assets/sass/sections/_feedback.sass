@@ -1,0 +1,164 @@
+/*******************************************************/
+/**************** 17. Feedback Section *****************/
+/*******************************************************/
+.feedback-content-area
+    .slick-dots
+        padding-left: 3px
+        justify-content: start
+        li
+            background: $secondary-color
+            &:before
+                border-color: $secondary-color
+            
+.feedback-active
+    .slick-list
+        padding-top: 20px
+
+.progress
+    display: block
+    width: 100%
+    height: 2px
+    overflow: hidden
+    background-size: 50px 100%
+    background-repeat: no-repeat
+    transition: background-size .4s ease-in-out
+    background-color: transparentize($secondary-color, 0.85)
+    background-image: linear-gradient(to right, $secondary-color, $secondary-color)
+    
+.feedback-item
+    p
+        font-size: 24px
+        line-height: 1.66
+        color: $heading-color
+        font-family: $heading-font
+        +res-bl(ms)
+            font-size: 20px
+        +res-bl(xs)
+            font-size: 18px
+        &:after,
+        &:before
+            padding: 0 10px
+            font-size: 14px
+            font-weight: 900
+            display: inline-block
+            color: $secondary-color
+            font-family: "Font Awesome 5 Pro"
+        &:before
+            content: "\f10d"
+            transform: rotate(5deg) translateY(-15px)
+        &:after
+            content: "\f10e"
+            transform: rotate(5deg) translateY(10px)
+    .feedback-author
+        display: flex
+        flex-wrap: wrap
+        margin-top: 25px
+        align-items: center
+        img
+            +size(55px)
+            border-radius: 50%
+            margin-right: 20px
+        .title
+            margin: 15px auto 15px 0
+            h4
+                font-size: 22px
+                margin-bottom: 2px
+                +res-bl(xs)
+                    font-size: 20px
+            span
+                color: $primary-color
+        .ratting
+            padding: 8px 12px
+            background: white
+            border-radius: 5px
+            box-shadow: 10px 0 60px rgba(34, 34, 34, 0.1)
+            
+.feedback-images
+    z-index: 1
+    display: flex
+    position: relative
+    align-items: start
+    padding-right: 10%
+    img
+        &.first-image
+            width: 62%
+            margin-top: 26%
+            position: relative
+        &.last-image
+            width: 65%
+            margin-left: -30%
+        &.bg-image
+            top: 7%
+            right: 0
+            z-index: -1
+            max-width: 50%
+            position: absolute
+            
+/* Feedback Style Two */
+.feedback-two-active
+    +res-ab(md)
+        +gapLR(margin, -320px)
+    .feedback-item.style-two
+        +gapLR(margin, 15px)
+    .slick-dots
+        li
+            background: $secondary-color
+            &:before
+                border-color: $secondary-color
+.feedback-item.style-two
+    z-index: 1
+    max-width: 770px
+    position: relative
+    margin-bottom: 30px
+    padding: 40px 50px 25px
+    background: $lighter-color
+    +res-bl(lg)
+        max-width: 630px
+    +res-bl(md)
+        max-width: none
+        +gapLR(padding, 25px)
+    .content-image
+        display: flex
+        +res-bl(sm)
+            flex-wrap: wrap
+        p
+            +res-ab(sm)
+                margin-right: 45px
+            +res-bl(lg)
+                font-size: 18px
+        .image
+            flex: none
+            +res-ab(sm)
+                width: 23%
+            img:not(.bg)
+                border-radius: 25px
+            .bg
+                top: 5%
+                right: 0
+                z-index: -1
+                max-width: 35%
+                position: absolute
+    .feedback-author
+        border-top: 1px solid $border-color
+        +res-ab(sm)
+            padding-top: 20px
+        h4
+            margin-bottom: 0
+            +res-bl(lg)
+                font-size: 18px
+            +res-bl(xs)
+                font-size: 16px
+        .icon
+            font-size: 50px
+            margin-right: 22px
+            color: $secondary-color
+        .ratting
+            align-items: center
+            +gapTB(padding, 5px)
+            h6
+                margin: 0 15px 0 0
+                +res-ab(lg)
+                    font-size: 18px
+                +res-bl(xs)
+                    display: none
+    

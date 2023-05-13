@@ -1,0 +1,55 @@
+/*******************************************************/
+/******************* 08. Page Banner *******************/
+/*******************************************************/
+.page-banner
+    text-align: center
+    background-size: cover
+    +overlay($heading-color, 0.2)
+    background-position: center
+.banner-inner
+    position: relative
+    padding: 40px 85px
+    +container(max-content)
+    background: $secondary-color
+    +res-bl(sm)
+        padding: 25px 55px
+    +res-bl(xs)
+        +gapLR(padding, 26px)
+    h1
+        font-size: 75px
+        font-weight: 400
+        font-family: $script-font
+        text-transform: capitalize
+        +res-bl(lg)
+            font-size: 65px
+        +res-bl(md)
+            font-size: 55px
+        +res-bl(sm)
+            font-size: 45px
+        +res-bl(xs)
+            font-size: 40px
+    &.text-center
+        .bg-text
+            transform: translate(-50%, -50%)
+        .breadcrumb
+            justify-content: center
+.breadcrumb
+    padding: 0
+    font-size: 24px
+    margin: 20px 0 5px
+    background: transparent
+    text-transform: capitalize
+    +res-bl(sm)
+        font-size: 20px
+    +res-bl(xs)
+        font-size: 18px
+    .breadcrumb-item
+        padding: 0
+        +flexcenter(center)
+        &.active
+            color: white
+        &+.breadcrumb-item::before
+            +gapLR(margin, 15px)
+            +circle(white, 5px)
+            flex: none
+            content: ''

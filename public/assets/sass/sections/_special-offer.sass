@@ -1,0 +1,102 @@
+/*******************************************************/
+/****************** 14. Special Offer ******************/
+/*******************************************************/
+.special-offer
+    z-index: 1
+    position: relative
+    .litchi,
+    .offer-bg,
+    .munakoiso,
+    .special-offer-left,
+    .special-offer-right
+        z-index: -1
+        position: absolute
+    .offer-bg
+        top: 0
+        left: 30%
+        max-width: 50%
+    .munakoiso
+        top: 20%
+        right: 5%
+        max-width: 20%
+        animation: down-up-two 15s infinite
+    .litchi
+        right: 25%
+        bottom: 20%
+        max-width: 20%
+        animation: down-up-one 8s infinite
+    .special-offer-left
+        left: 0
+        bottom: 0
+        max-width: 35%
+    .special-offer-right
+        right: 0
+        bottom: 0
+        max-width: 35%
+.special-offer-content
+    +container(600px)
+    +gapLR(padding, 25px)
+.count-down
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    li
+        padding: 25px
+        font-size: 20px
+        font-weight: 500
+        background: white
+        border-radius: 7px
+        margin-bottom: 30px
+        width: calc(25% - 22px)
+        font-family: $heading-font
+        +res-bl(md)
+            width: calc(50% - 15px)
+        +res-bl(xs)
+            font-size: 16px
+        span
+            display: block
+            font-size: 45px
+            margin-bottom: 15px
+            color: $secondary-color
+            +res-bl(xs)
+                font-size: 35px
+            
+.count-down-btns
+    .theme-btn
+        margin: 10px 3px 0
+        
+/* Special Offer Two */
+.special-offer-two
+    overflow: hidden
+    .offer-bg
+        z-index: -1
+        right: 10%
+        top: -25%
+        max-width: 80%
+        position: absolute
+    .shape-one
+        right: 5%
+        top: 15%
+        z-index: -1
+        max-width: 20%
+        position: absolute
+        animation: down-up-two 20s infinite
+    .shape-two
+        right: 12%
+        bottom: 10%
+        z-index: -1
+        max-width: 15%
+        position: absolute
+        animation: down-up-one 10s infinite
+        
+/* Special Offer */
+.special-offer-three-inner
+    overflow: hidden
+    .offer-bg
+        position: absolute
+        z-index: -1
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)
+    .count-down li span
+        color: $heading-color

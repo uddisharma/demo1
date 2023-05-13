@@ -1,0 +1,72 @@
+/*******************************************************/
+/****************** 11. Offer Banners ******************/
+/*******************************************************/
+.offer-banners-area
+    +res-ab(lb)
+        +gapLR(padding, 55px)
+.offer-banner-item
+    z-index: 1
+    padding: 40px
+    position: relative
+    margin-bottom: 30px
+    background-size: cover
+    height: calc(100% - 30px)
+    +flexcenter(space-between)
+    background-position: center
+    background-color: transparentize($primary-color, 0.93)
+    +res-bl(ms)
+        +gapLR(padding, 25px)
+    +res-bl(xs)
+        display: block
+    .content
+        flex: none
+        +res-ab(xs)
+            max-width: 70%
+        +res-bl(xs)
+            margin-bottom: 25px
+        .sub-title
+            margin-bottom: 10px
+        h4
+            font-size: 26px
+            +res-bl(lg)
+                font-size: 22px
+        .theme-btn
+            padding: 8px 25px
+    .image
+        +res-ab(xs)
+            max-width: 45%
+    .offer-bg
+        position: absolute
+        max-width: 75%
+        z-index: -1
+        bottom: 0
+        right: 0
+    &.color-two
+        background-color: transparentize($secondary-color, 0.93)
+        .sub-title
+            color: $secondary-color
+    &.color-three
+        background-color: transparentize($green-color, 0.93)
+        .sub-title
+            color: $green-color
+        .theme-btn
+            &:not(:hover)
+                background: $green-color
+    &.style-two
+        padding: 50px 75px 65px
+        +res-bl(ms)
+            +gapLR(padding, 35px)
+        .content
+            max-width: none
+        .sub-title
+            font-size: 24px
+            font-weight: 500
+            color: $heading-color
+            font-family: $heading-font
+        h3
+            margin-bottom: 20px
+        .theme-btn
+            border-color: $heading-color
+            &:hover
+                color: $heading-color
+                border-color: $heading-color

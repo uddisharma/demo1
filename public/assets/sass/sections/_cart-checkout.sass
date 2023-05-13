@@ -1,0 +1,152 @@
+/*******************************************************/
+/************** 28. Cart & Checkout Area ***************/
+/*******************************************************/
+/* Cart Page */
+.cart-item-wrap
+    border-top: 1px solid $border-color
+.cart-single-item
+    +gapTB(padding, 20px)
+    border-bottom: 1px solid $border-color
+    +res-ab(md)
+        display: flex
+        align-items: center
+        justify-content: space-between
+    .cart-img
+        flex: none
+        width: 90px
+    .product-price
+        &:before
+            content: '$'
+    .product-total-price
+        flex: none
+        width: 50px
+        font-weight: 600
+        text-align: center
+        color: $heading-color
+        &:before
+            content: '$'
+    +res-bl(md)
+        text-align: center
+        background: $lighter-color
+        .close
+            float: none
+        .cart-img
+            margin: 15px auto
+        .quantity-input
+            +gapTB(margin, 15px)
+            justify-content: center
+        .stock
+            display: block
+            margin-bottom: 15px
+        .theme-btn
+            margin-bottom: 10px
+    
+.quantity-input
+    display: flex
+    button
+        width: 45px
+        background: transparent
+        border: 1px solid $border-color
+    input
+        width: 55px
+        padding: 5px 15px
+        text-align: center
+        background: transparent
+        
+.total-price,
+.shipping-price,
+.sub-total-price
+    &:before
+        content: '$'
+        
+.discount-wrapper
+    input
+        max-width: 200px
+        +gapTB(padding, 8px)
+        +gapTB(margin, 10px)
+    button
+        margin: 10px
+        
+.update-shopping
+    +gapLR(margin, -5px)
+    .theme-btn
+        margin: 5px
+
+/* Checkout Page */
+.checkout-faqs
+    .alert
+        padding: 20px 30px
+        margin-bottom: 25px
+        h6
+            margin-bottom: 0
+            a
+                padding: 0
+                color: $secondary-color
+                background: transparent
+        form
+            padding: 20px 0 10px
+            input
+                font-size: 16px
+                background: transparent
+            .form-footer
+                display: flex
+                align-items: center
+                margin-bottom: 15px
+                button
+                    margin-right: 15px
+                    +res-bl(xs)
+                        margin-right: 8px
+                        +gapLR(padding, 20px)
+                label
+                    line-height: 1.4
+                    margin: 0 0 0 5px
+                    
+.checkout-form
+    padding: 30px
+    border: 1px solid $border-color
+    +res-bl(xs)
+        +gapLR(padding, 15px)
+    .form-group
+        margin-bottom: 30px
+    .nice-select,
+    .form-control
+        font-size: 16px
+        .current
+            font-weight: 400
+    h6
+        margin-bottom: 15px
+        
+.payment-method
+    ul
+        border: 1px solid $border-color
+        li
+            padding: 15px 20px 15px 45px
+            &:not(:last-child)
+                border-bottom: 1px solid $border-color
+        .custom-control-label
+            display: flex
+            align-items: center
+            i
+                margin-left: 10px
+                color: $secondary-color
+            &:before
+                top: 7px
+            &:after
+                top: 6.5px
+        .custom-control-input:checked~.custom-control-label
+            &:before
+                background: $heading-color
+                border-color: $heading-color
+        
+.shoping-cart-total
+    table
+        width: 100%
+    tbody
+        background: $lighter-color
+        tr
+            &:not(:last-child)
+                border-bottom: 1px solid $border-color
+            td
+                padding: 10px 25px
+                +res-bl(xs)
+                    +gapLR(padding, 22px)

@@ -1,0 +1,98 @@
+/*******************************************************/
+/****************** 23. FAQs Section *******************/
+/*******************************************************/
+/* Faq Features */
+.what-we-want-content
+    max-width: 530px
+            
+.what-we-want-shapes
+    img
+        z-index: -1
+        max-width: 40%
+        position: absolute
+    .shape-one
+        top: 0
+        left: 10%
+    .shape-two
+        top: 15%
+        right: 5%
+        
+/* FAQs */
+.faqs
+    .card
+        z-index: 1
+        border: none
+        border-radius: 0
+        margin-bottom: 20px
+        box-shadow: 0 0 10px rgba(100, 100, 100, 0.1)
+        .content
+            &:before
+                +size(100%)
+                content: ''
+                left: 0
+                top: 0
+                z-index: -1
+                position: absolute
+            &.show
+                &:before
+                    box-shadow: 10px 0 60px rgba(34, 34, 34, 0.1)
+    .card-header
+        display: flex
+        cursor: pointer
+        border-radius: 0
+        position: relative
+        padding: 22px 33px
+        border-bottom: none
+        background-color: transparent
+        justify-content: space-between
+        +res-bl(md)
+            font-size: 18px
+            line-height: 1.4
+            +gapLR(padding, 25px)
+        +res-bl(ms)
+            font-size: 16px
+        &:after
+            position: absolute
+            content: ''
+            height: 1px
+            left: 50%
+            bottom: 0
+            opacity: 1
+            transition: 0.5s
+            width: calc(100% - 66px)
+            transform: translate(-50%)
+            background: $border-color
+        &.collapsed
+            &:after
+                opacity: 0
+        i
+            font-size: 16px
+            font-weight: 400
+            margin: 5px 0 0 10px
+    .card-body
+        padding: 18px 33px 10px
+        +res-bl(md)
+            +gapLR(padding, 25px)
+        
+/* FAQ Shapes */
+.faq-shapes
+    img
+        z-index: -1
+        max-width: 15%
+        position: absolute
+    .shape-one
+        left: 0
+        top: 25%
+        animation: down-up-one 10s infinite
+    .shape-two
+        left: 0
+        bottom: 0
+        animation: down-up-one 10s infinite
+    .shape-three
+        right: 3%
+        top: 130px
+        animation: down-up-two 20s infinite
+    .shape-four
+        right: 0
+        bottom: -35px
+        animation: down-up-one 10s infinite

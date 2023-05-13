@@ -1,0 +1,284 @@
+/*******************************************************/
+/******************* 28. Main Footer *******************/
+/*******************************************************/
+.footer-top-newsletter
+    +flexcenter(space-between)
+    border-bottom: 1px solid transparentize(white, 0.9)
+    +res-bl(xl)
+        flex-wrap: wrap
+    .section-title
+        flex: none
+        margin-right: 100px
+        h2
+            margin-bottom: 0
+    form
+        width: 100%
+        display: flex
+        align-items: center
+        +gapTB(margin, 10px)
+        +res-bl(ms)
+            flex-wrap: wrap
+        input
+            color: white
+            border: none
+            border-radius: 0
+            font-size: 16px
+            margin-right: 50px
+            padding: 0 22px 12px
+            background: transparent
+            border-bottom: 1px solid
+            +res-bl(ms)
+                margin-right: 0
+                margin-bottom: 15px
+            &::placeholder
+                font-weight: 400
+                color: white
+        button
+            flex: none
+    .happy-clients
+        flex: none
+        display: flex
+        align-items: center
+        > i
+            font-size: 65px
+            margin-right: 28px
+            color: $primary-color-two
+            +res-bl(sm)
+                font-size: 35px
+                margin-right: 15px
+        .count-text
+            font-size: 42px
+            font-weight: 600
+            margin-right: 24px
+            font-family: $heading-font
+            +res-bl(sm)
+                font-size: 25px
+                margin-right: 15px
+            &:after
+                content: '+'
+        > span
+            font-weight: 600
+            +res-ab(xs)
+                font-size: 18px
+            
+.footer-widget
+    margin-bottom: 50px
+
+.footer-title
+    margin-bottom: 40px
+
+.menu-widget
+    ul
+        margin-bottom: -10px
+        li
+            margin-bottom: 10px
+            a
+                display: inline-flex
+                position: relative
+                &:before
+                    content: ''
+                    left: 0
+                    top: 12px
+                    opacity: 0
+                    transition: 0.5s
+                    position: absolute
+                    +circle(white, 5px)
+                &:hover
+                    padding-left: 15px
+                    text-decoration: underline
+                    &:before
+                        opacity: 1
+    &.two-column
+        ul
+            display: flex
+            flex-wrap: wrap
+            li
+                width: 50%
+                
+.footer-logo
+    a
+        background: white
+        border-radius: 7px
+        padding: 20px 35px
+        display: inline-block
+    
+.contact-widget
+    max-width: 260px
+    +res-ab(md)
+        margin-left: auto
+    ul
+        li
+            display: flex
+            &:not(:last-child)
+                margin-bottom: 15px
+            i
+                font-size: 18px
+                margin: 6px 15px 0 0
+                
+.news-widget
+    max-width: 275px
+    li
+        display: flex
+        align-items: center
+        +res-bt(xl, lb)
+            display: block
+        &:not(:last-child)
+            margin-bottom: 20px
+        .image
+            flex: none
+            max-width: 80px
+            margin-right: 18px
+            +res-bt(xl, lb)
+                margin-bottom: 10px
+            img
+                border-radius: 5px
+        .content
+            h6
+                font-size: 18px
+                font-weight: 500
+                margin-bottom: 5px
+            .name
+                opacity: 0.4
+                
+.gallery-widget
+    ul
+        display: flex
+        flex-wrap: wrap
+        margin: 0 -10px -10px 0
+        li
+            flex: none
+            max-width: 80px
+            position: relative
+            margin: 0 10px 10px 0
+            img
+                width: 100%
+            a
+                position: absolute
+                +size(100%)
+                left: 0
+                top: 0
+                opacity: 0
+                font-size: 20px
+                transition: 0.5s
+                +flexcenter(center)
+                background: rgba(31, 31, 23, 0.65)
+                i
+                    color: $primary-color-two
+                &:hover
+                    opacity: 1
+            
+.copyright-area
+    flex-wrap: wrap
+    margin-top: 25px
+    position: relative
+    +flexcenter(space-between)
+    border-top: 1px solid rgba(255, 255, 255, 0.1)
+    p
+        margin-right: 25px
+    .footer-menu
+        display: flex
+        flex-wrap: wrap
+        max-width: 500px
+        margin-bottom: 15px
+        li
+            font-family: $heading-font
+            margin-bottom: 5px
+            a
+                &:hover
+                    text-decoration: underline
+            &:not(:last-child)
+                margin-right: 35px
+            
+.main-footer
+    z-index: 1
+    position: relative
+    .footer-shapes
+        img
+            z-index: -1
+            max-width: 10%
+            position: absolute
+        .footer-bg
+            top: 0
+            left: 10%
+            max-width: 50%
+        .shape-one
+            top: 25%
+            left: 3%
+            animation: upDownLeft 40s infinite
+        .shape-two
+            bottom: 10%
+            left: 10%
+            animation: down-up-one 10s infinite
+        .shape-three
+            top: 15%
+            right: 8%
+            animation: moveLeftRight 20s infinite
+        .shape-four
+            right: 5%
+            bottom: 15%
+            animation: down-up-two 10s infinite
+        
+.footer-black
+    background: #1f1f17
+    .footer-top-newsletter
+        +res-bl(lb)
+            flex-wrap: wrap
+        .section-title
+            margin-right: 70px
+        .happy-clients
+            margin-left: 100px
+            padding-left: 100px
+            +gapTB(padding, 10px)
+            border-left: 2px solid rgba(255, 255, 255, 0.15)
+            +res-bl(lb)
+                margin-left: 0
+            +res-bl(xl)
+                padding-left: 55px
+            +res-bl(md)
+                padding-left: 25px
+            +res-bl(sm)
+                padding-left: 15px
+            .count-text
+                min-width: 150px
+                +res-bl(sm)
+                    min-width: auto
+    .theme-btn
+        i
+            color: $heading-color
+    .footer-title
+        margin-bottom: 30px
+    .footer-logo
+        a
+            padding: 0
+            border-radius: 0
+            background: transparent
+    .social-style-two
+        a
+            i
+                transition: 0.5s
+            &:hover
+                background: $primary-color-two
+                i
+                    color: $heading-color
+    .menu-widget
+        ul
+            li
+                a
+                    &:hover
+                        color: $primary-color-two
+                        &:before
+                            background: $primary-color-two
+    .contact-widget
+        margin-left: 0
+        ul
+            li
+                i
+                    color: $primary-color-two
+    .copyright-area-wrap
+        background: #0c0c0b
+        .copyright-area
+            border-top: none
+            .scroll-top
+                background: $primary-color-two
+                span
+                    color: $heading-color

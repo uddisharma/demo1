@@ -1,0 +1,212 @@
+/*******************************************************/
+/****************** 16. Gallery Area *******************/
+/*******************************************************/
+.gallery-area,
+.gallery-area-two
+    +res-ab(lb)
+        +gapLR(padding, 55px)
+.gallery-active
+    .gallery-item
+        +gapLR(margin, 15px)
+        +res-bl(xl)
+            width: 262px
+            &.big-item
+                width: 395px
+.gallery-item
+    position: relative
+    margin-bottom: 80px
+    .gallery-over
+        left: 50%
+        width: 90%
+        bottom: 0
+        opacity: 0
+        transition: 0.5s
+        max-width: 410px
+        background: white
+        position: absolute
+        padding: 25px 40px
+        border-radius: 7px
+        transform: translate(-50%)
+        +flexcenter(space-between)
+        box-shadow: 10px 0 60px rgba(114, 114, 114, 0.1)
+        +res-bl(xl)
+            padding: 20px
+        h4
+            margin-bottom: 5px
+            +res-bl(xl)
+                font-size: 20px
+        p
+            margin-bottom: 0
+        .details-btn
+            +size(55px)
+            color: white
+            line-height: 55px
+            text-align: center
+            border-radius: 5px
+            background: $secondary-color
+            +res-bl(xl)
+                +size(40px)
+                line-height: 40px
+    &:hover
+        .gallery-over
+            opacity: 1
+            bottom: -50px
+.slider-arrows
+    button
+        &:first-child
+            margin-right: 5px
+        
+/* Gallery Two */
+.gallery-two-active
+    .slick-slide
+        +gapLR(margin, 15px)
+        .gallery-style-two
+            +res-bl(xl)
+                width: 262px !important
+                &.big-item
+                    width: 395px !important
+.gallery-style-two
+    position: relative
+    margin-bottom: 20px
+    .gallery-over
+        +size(100%)
+        left: 0
+        top: 0
+        opacity: 0
+        display: flex
+        transition: 0.5s
+        position: absolute
+        align-items: center
+        justify-content: center
+        background: transparentize($heading-color, 0.6)
+        .content
+            margin-top: 25px
+            transition: 0.5s
+            .category
+                color: white
+                font-size: 18px
+                font-weight: 600
+                padding: 3px 20px
+                font-family: $heading-font
+                background: $primary-color
+            h4
+                margin: -2px 0 0
+                background: white
+                padding: 8px 30px 12px
+    &:hover
+        .gallery-over
+            opacity: 1
+            .content
+                margin-top: 0
+            
+/* Portfolio Page */
+.portfolio-fluid-area
+    +res-ab(lb)
+        +gapLR(padding, 55px)
+.portfolio-active
+    .gallery-style-two
+        margin-bottom: 30px
+        img
+            width: 100%
+        .gallery-over
+            padding: 60px
+            align-items: end
+            justify-content: start
+            +res-bl(lb)
+                padding: 30px
+                h4
+                    font-size: 22px
+            .content
+                margin: 0 0 15px
+        &:hover
+            .content
+                margin-bottom: 0
+.portfolio-filter
+    flex-wrap: wrap
+    position: relative
+    align-items: center
+    display: inline-flex
+    padding-bottom: 10px
+    border-bottom: 1px solid $border-color
+    li
+        line-height: 1
+        cursor: pointer
+        font-size: 18px
+        font-weight: 600
+        transition: 0.5s
+        margin-bottom: 15px
+        color: $heading-color
+        font-family: $heading-font
+        border-bottom: 1px solid white
+        &:not(:last-child)
+            margin-right: 30px
+            +res-bl(sm)
+                margin-right: 18px
+        &.current
+            color: $secondary-color
+            border-color: $secondary-color
+    &:before
+        content: ''
+        height: 1px
+        width: 60px
+        left: 0
+        bottom: 0
+        position: absolute
+        background: $secondary-color
+            
+/* Portfolio Details */
+.portfolio-details-content
+    h2
+        font-size: 40px
+        +res-bl(md)
+            font-size: 35px
+        +res-bl(sm)
+            font-size: 30px
+.pd-inner-item
+    font-size: 18px
+    +res-bl(lg)
+        margin-top: 20px
+    +res-bl(xs)
+        font-size: 16px
+        h4
+            font-size: 20px
+    
+.portfolio-next-prev
+    +flexcenter(space-between)
+    +gapLR(margin, -20px)
+    +res-bl(md)
+        display: block
+    > div
+        display: flex
+        margin-top: 30px
+        align-items: center
+        .image
+            margin: 0 20px
+            +res-bl(xs)
+                max-width: 30%
+        .content
+            margin: 0 20px
+            h4
+                margin-bottom: 5px
+                +res-bl(xs)
+                    font-size: 20px
+                a
+                    &:hover
+                        text-decoration: underline
+        &.next-portfolio
+            text-align: right
+            +res-bl(md)
+                justify-content: flex-end
+    .show-all
+        width: 35px
+        cursor: pointer
+        flex-wrap: wrap
+        font-size: 33px
+        margin-top: 30px
+        border-radius: 50%
+        +flexcenter(center)
+        background: transparent
+        +res-bl(md)
+            margin: 35px auto
+        i
+            margin: -11px 0

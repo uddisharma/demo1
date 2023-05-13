@@ -1,0 +1,53 @@
+/*******************************************************/
+/****************** 20. Team Section *******************/
+/*******************************************************/
+.team-active,
+.two-row-team-active
+    +gapLR(margin, -15px)
+    .team-member
+        +gapLR(margin, 15px)
+        img
+            display: inline-block
+.team-member
+    z-index: 1
+    position: relative
+    text-align: center
+    margin-bottom: 30px
+    +gapLR(padding, 20px)
+    .image
+        position: relative
+        margin-bottom: 22px
+        display: inline-block
+        img
+            border-radius: 50%
+        .social-style-one
+            right: 30px
+            top: 50%
+            opacity: 0
+            transition: 0.5s
+            position: absolute
+            flex-direction: column
+            justify-content: center
+            padding: 15px 15px 12px
+            background: $primary-color
+            transform: translateY(-50%)
+            a
+                color: white
+                margin-right: 0
+    h4
+        font-size: 22px
+        margin-bottom: 4px
+    .designation
+        font-weight: 500
+        color: $primary-color
+    .team-bg
+        bottom: 20px
+        z-index: -1
+        left: 50%
+        max-width: 100%
+        position: absolute
+        transform: translate(-55%)
+    &:hover
+        .social-style-one
+            right: 0
+            opacity: 1

@@ -1,0 +1,75 @@
+/*******************************************************/
+/****************** 24. Counter Area *******************/
+/*******************************************************/
+.counter-wrap
+    display: flex
+    flex-wrap: wrap
+    +gapLR(margin, -15px)
+    justify-content: space-between
+    +res-bl(lg)
+        justify-content: space-around
+    .counter-item
+        margin-bottom: 30px
+        +gapLR(padding, 15px)
+    .count-text
+        display: block
+        line-height: 1
+        font-size: 55px
+        margin-bottom: 10px
+        font-family: $script-font
+        &.plus:after
+            content: '+'
+        &.k-plus:after
+            content: 'k+'
+        +res-bl(sm)
+            font-size: 40px
+            
+.team-profile-content
+    max-width: 500px
+.circle-counter
+    display: flex
+    position: relative
+    justify-content: space-between
+    +res-bl(xs)
+        display: block
+        &:before
+            display: none
+    &:before
+        content: ''
+        width: 1px
+        bottom: 0
+        left: 50%
+        position: absolute
+        background: $border-color
+        height: calc(100% - 50px)
+            
+.team-skill-item
+    max-width: 135px
+    margin-top: 50px
+    text-align: center
+    +res-bl(xs)
+        +gapLR(margin, auto)
+    h4
+        font-size: 22px
+        margin-bottom: 0
+.progress-content
+    position: relative
+    h2
+        left: 50%
+        top: 40px
+        font-size: 55px
+        font-weight: 400
+        position: absolute
+        color: $secondary-color
+        font-family: $script-font
+        transform: translate(-50%)
+    &.two
+        h2
+            color: $primary-color
+            
+.team-profile-bg
+    z-index: -1
+    top: -90px
+    right: -20px
+    max-width: 30%
+    position: absolute

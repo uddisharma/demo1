@@ -1,0 +1,103 @@
+/*******************************************************/
+/**************** 22. Features Section *****************/
+/*******************************************************/
+.feature-item
+    z-index: 1
+    margin-top: 100px
+    text-align: center
+    position: relative
+    margin-bottom: 30px
+    background: transparentize($secondary-color, 0.9)
+    .image
+        height: 160px
+        margin-bottom: 35px
+        transform: translateY(-100px)
+    .content
+        +container(330px)
+        padding: 0 25px 20px
+    .number
+        left: 50%
+        top: 10px
+        z-index: -1
+        opacity: 0.07
+        line-height: 1
+        font-weight: 700
+        font-size: 220px
+        color: transparent
+        position: absolute
+        -webkit-text-stroke: 1px
+        transform: translate(-50%)
+        font-family: $heading-font
+        -webkit-text-stroke-color: black
+        +res-bl(xs)
+            top: 50px
+            font-size: 150px
+    .read-more
+        display: flex
+        padding: 12px 35px
+        color: $secondary-color
+        justify-content: space-between
+        background: transparentize($secondary-color, 0.9)
+    &:hover
+        .read-more
+            color: white
+            background: $secondary-color
+    &.color-two,
+        background: transparentize($green-color, 0.94)
+        .read-more
+            color: $green-color
+            background: transparentize($green-color, 0.94)
+        &:hover
+            .read-more
+                color: white
+                background: $green-color
+    &.color-three,
+        background: transparentize($primary-color, 0.94)
+        .read-more
+            color: $primary-color
+            background: transparentize($primary-color, 0.94)
+        &:hover
+            .read-more
+                color: white
+                background: $primary-color
+            
+/* Feature Two */
+.feature-three-inner
+    display: flex
+    flex-wrap: wrap
+    .feature-two-item
+        flex: 1 1 auto
+.feature-two-item
+    padding: 25px
+    transition: 0.5s
+    +flexcenter(center)
+    background: #f9f6ef
+    margin-bottom: 10px
+    +res-bl(xs)
+        +gapLR(padding, 20px)
+        justify-content: flex-start
+    .icon
+        color: #1f1f17
+        font-size: 55px
+        margin-right: 22px
+        +res-bl(xs)
+            font-size: 40px
+            margin-right: 18px
+    .content
+        h4
+            margin-bottom: 0
+            +res-bl(xs)
+                font-size: 20px
+            a
+                &:hover
+                    color: #1f1f17
+        p
+            margin-bottom: 0
+            transition: 0.5s
+            +res-bl(xs)
+                font-size: 15px
+                line-height: 1.4
+    &:hover
+        background: $primary-color-two
+        p
+            color: #1f1f17

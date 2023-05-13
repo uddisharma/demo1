@@ -1,0 +1,47 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "flaticon";
+  src: url("./flaticon.ttf?954b58c9f48c7f681e89ca525a59a432") format("truetype"), url("./flaticon.woff?954b58c9f48c7f681e89ca525a59a432") format("woff"), url("./flaticon.woff2?954b58c9f48c7f681e89ca525a59a432") format("woff2"), url("./flaticon.eot?954b58c9f48c7f681e89ca525a59a432#iefix") format("embedded-opentype"), url("./flaticon.svg?954b58c9f48c7f681e89ca525a59a432#flaticon") format("svg"); }
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+  font-family: flaticon !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.flaticon-wheat-sack:before {
+  content: ""; }
+
+.flaticon-fruits:before {
+  content: ""; }
+
+.flaticon-social-care:before {
+  content: ""; }
+
+.flaticon-leaf-1:before {
+  content: ""; }
+
+.flaticon-offer:before {
+  content: ""; }
+
+.flaticon-return-box:before {
+  content: ""; }
+
+.flaticon-24-hours:before {
+  content: ""; }
+
+.flaticon-quote:before {
+  content: ""; }
+
+.flaticon-eggs-1:before {
+  content: ""; }
+
+.flaticon-delivery-man:before {
+  content: ""; }
+
+.flaticon-sea-waves:before {
+  content: ""; }

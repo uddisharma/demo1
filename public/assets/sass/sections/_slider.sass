@@ -1,0 +1,262 @@
+/*******************************************************/
+/****************** 07. Slider Section ******************/
+/*******************************************************/
+.slider-section
+    z-index: 1
+    position: relative
+    .slick-arrow
+        +circle(white, 65px)
+        z-index: 2
+        top: 50%
+        transition: 0.5s
+        position: absolute
+        box-shadow: 10px 0 60px rgba(118, 167, 19, 0.3)
+        +res-bl(sm)
+            +size(50px)
+            line-height: 50px
+        +res-bl(xxl)
+            opacity: 0
+        &:focus,
+        &:hover
+            color: white
+            background: $secondary-color
+        &.slider-prev
+            left: 70px
+            +res-bl(xxl)
+                left: 15px
+        &.slider-next
+            right: 70px
+            +res-bl(xxl)
+                right: 15px
+    .bg-leaf,
+    .bg-shape
+        z-index: -1
+        position: absolute
+    .bg-leaf
+        top: 0
+        right: 15%
+        max-width: 35%
+    .bg-shape
+        right: 0
+        bottom: 0
+        max-width: 80%
+    .slick-track
+        +flexcenter(center)
+    &:hover
+        .slick-arrow
+            opacity: 1
+    &.slider-two
+        +overlay(#1a2428, 1)
+        &:before
+            mix-blend-mode: multiply
+        .slide-shapes
+            img
+                z-index: -1
+                max-width: 10%
+                position: absolute
+            .leaf-one
+                left: 5%
+                top: 20%
+                animation: down-up-one 10s infinite
+            .leaf-two
+                left: 10%
+                bottom: 15%
+                animation: down-up-two 20s infinite
+
+.slider-single-item
+    z-index: 1
+    min-height: 825px
+    align-items: center
+    position: relative
+    background-size: cover
+    padding-top: 145px
+    padding-bottom: 60px
+    +res-bl(md)
+        min-height: auto
+    .slider-content
+        +res-bl(lg)
+            +gapTB(padding, 40px)
+    h1
+        +res-bl(xl)
+            font-size: 66px
+        +res-bl(md)
+            font-size: 55px
+        +res-bl(sm)
+            font-size: 44px
+        +res-bl(xs)
+            font-size: 35px
+    h6
+        font-size: 18px
+        margin-top: 25px
+    .slider-btns
+        .theme-btn
+            margin-top: 10px
+            &:not(:last-child)
+                margin-right: 10px
+    .slider-images
+        display: inline-block
+        +res-ab(lg)
+            text-align: right
+        +res-ab(xxl)
+            margin-right: -150px
+        +res-bl(lg)
+            +gapTB(margin, 40px)
+        img
+            display: inline-block
+        .offer
+            top: 0
+            left: 0
+            max-width: 33%
+            position: absolute
+    .slide-shapes
+        img
+            z-index: -1
+            max-width: 10%
+            position: absolute
+        .pumpkin-shape
+            top: 16%
+            left: 12%
+        .two-leaf
+            left: 7%
+            bottom: 22%
+            animation: upDownLeft 40s infinite
+        .half-leaf
+            bottom: 0
+            left: 20%
+            animation: moveLeftRight 30s infinite
+        .leaf-one
+            left: 42%
+            top: 20%
+            animation: down-up-one 10s infinite
+        .leaf-two
+            left: 45%
+            bottom: 22%
+            animation: down-up-two 20s infinite
+    *
+        opacity: 0
+        transition: 1s
+        animation-duration: 1s
+        animation-fill-mode: both
+    &.slick-slide
+        display: flex
+    &.slick-active
+        *
+            opacity: 1
+        p,
+        h1,
+        h6,
+        .sub-title,
+        .slider-btns,
+        .slider-images
+            animation-name: fadeInUp
+        .sub-title
+            animation-delay: 0.3s
+        h1
+            animation-delay: 0.5s
+        h6,
+        .slider-images
+            animation-delay: 0.7s
+        .slider-btns
+            animation-delay: 0.9s
+    &.slide-two
+        .slider-images
+            margin-right: 0
+            text-align: left
+            margin-bottom: -55px
+            +res-ab(xxl)
+                margin-left: -50px
+            .offer
+                right: 0
+                left: auto
+        .pumpkin-shape
+            right: 12%
+            left: auto
+        .two-leaf
+            right: 5%
+            left: auto
+            bottom: 10%
+        .half-leaf
+            left: 15%
+        .leaf-one
+            left: 55%
+            top: 18%
+        .leaf-two
+            left: 7%
+            bottom: 30%
+        &.slick-active
+            .slider-images
+                animation-delay: 0.3s
+    &.style-two
+        min-height: auto
+        padding-top: 215px
+        padding-bottom: 90px
+        +res-bl(lg)
+            padding-top: 135px
+            padding-bottom: 60px
+        *
+            opacity: 1
+        h1
+            color: white
+        .slider-images
+            padding-top: 25px
+            padding-left: 60px
+            .image
+                +res-bl(sm)
+                    max-height: 400px
+                +res-bl(ms)
+                    max-height: 350px
+                +res-bl(xs)
+                    max-height: 300px
+            .offer
+                max-width: 50%
+                
+    &.style-three
+        padding-top: 155px
+        padding-bottom: 60px
+        +res-ab(md)
+            min-height: 725px
+        +res-ab(lb)
+            +gapLR(padding, 130px)
+        +res-bl(xl)
+            padding-top: 175px
+            padding-bottom: 100px
+        .slider-content
+            z-index: 1
+            max-width: 515px
+            position: relative
+            +res-bl(lg)
+                +gapTB(padding, 0)
+            h1
+                +res-bt(lg, xxl)
+                    font-size: 65px
+            p
+                margin-top: 30px
+        .slider-images
+            z-index: 1
+            +gapLR(margin, 0)
+            position: relative
+            &:after
+                content: ''
+                width: 70%
+                z-index: -1
+                top: 45%
+                right: -50px
+                padding-top: 70%
+                position: absolute
+                border-radius: 50%
+                transform: translateY(-50%)
+                background: $lighter-color-two
+        &.slick-active
+            p
+                animation-delay: 0.7s
+        &.slide-one
+            .slider-images
+                +res-bl(xl)
+                    margin-top: 100px
+                    margin-bottom: 0
+        &.slide-two
+            .slider-content
+                +res-ab(xxl)
+                    margin-left: auto
+                +res-bl(xl)
+                    margin-top: 100px
